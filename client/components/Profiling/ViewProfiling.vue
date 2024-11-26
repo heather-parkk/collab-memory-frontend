@@ -5,7 +5,7 @@
     <div v-if="profile">
       <p><strong>Username:</strong> {{ profile.username }}</p>
       <div>
-        <strong>Goals in Fam.ly:</strong>
+        <strong>Goals within Fam.ly:</strong>
         <ul>
           <li v-for="(goal, index) in profile.selectedGoals" :key="index">
             {{ goal }}
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { fetchy } from "../../utils/fetchy";
 
 interface Profile {
